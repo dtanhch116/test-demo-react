@@ -4,7 +4,6 @@ class DisplayInfo extends React.Component {
 
     render() {
         const { listUsers, myInfo } = this.props;
-        console.log(myInfo);
 
         return (
             <div>
