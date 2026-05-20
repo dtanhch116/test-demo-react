@@ -1,30 +1,34 @@
 import React from 'react';
 
-class UserInfo extends React.Component {
+class AddUserInfo extends React.Component {
 
     state = {
-        name: "anT",
+        name: "",
         address: "HN",
-        age: 27
+        age: ''
     }
 
     handleOnChangeName = (event) => {
         this.setState({
             name: event.target.value
         });
-        console.log(event.target.value);
+        // console.log(event.target.value);
     }
 
     handleOnChangeAge = (event) => {
         this.setState({
             age: event.target.value
         });
-        console.log(event.target.value);
+        // console.log(event.target.value);
     }
 
     handleOnSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        this.props.onAddUser({
+            name: this.state.name,
+            address: this.state.address,
+            age: this.state.age
+        });
     }
 
     render() {
@@ -51,4 +55,4 @@ class UserInfo extends React.Component {
 
 }
 
-export default UserInfo;
+export default AddUserInfo;
