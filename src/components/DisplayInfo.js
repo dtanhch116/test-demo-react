@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DisplayInfo.scss";
 import logo from "../logo.svg";
 
@@ -46,6 +46,14 @@ const DisplayInfo = (props) => {
     const handleToggleShowListUser = () => {
         setShowListUser(!showListUser);
     }
+
+    useEffect(() => {
+        console.log("call me useEffect");
+    }, [listUsers);
+
+    console.log("asfasfasf");
+
+
     return (
         <div className="display-info-container">
             <div>
