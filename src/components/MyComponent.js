@@ -20,6 +20,14 @@ class MyComponent extends React.Component {
         })
     }
 
+    handleDeleteUser = (userId) => {
+        let currentListUsers = [...this.state.listUsers];
+        currentListUsers = currentListUsers.filter(item => item.id !== userId);
+        this.setState({
+            listUsers: currentListUsers
+        })
+    }
+
     render() {
 
         const myInfo = [1, 3, 4]
@@ -27,7 +35,9 @@ class MyComponent extends React.Component {
             <>
                 <AddUserInfo onAddUser={this.handleAddNewUser} />
                 <br />
-                <DisplayInfo listUsers={this.state.listUsers} />
+                <DisplayInfo
+                    listUsers={this.state.listUsers}
+                    onDeleteUser={this.handleDeleteUser} />
             </>
         );
     }

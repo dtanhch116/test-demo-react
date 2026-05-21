@@ -25,8 +25,8 @@ class AddUserInfo extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.onAddUser({
+            id: Math.floor(Math.random() * 10000),
             name: this.state.name,
-            address: this.state.address,
             age: this.state.age
         });
     }
