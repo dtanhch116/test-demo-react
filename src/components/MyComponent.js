@@ -24,11 +24,11 @@ class MyComponent extends React.Component {
 
         const myInfo = [1, 3, 4]
         return (
-            <div>
+            <>
                 <AddUserInfo onAddUser={this.handleAddNewUser} />
                 <br />
                 <DisplayInfo listUsers={this.state.listUsers} />
-            </div>
+            </>
         );
     }
 }
