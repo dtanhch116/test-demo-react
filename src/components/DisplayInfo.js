@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DisplayInfo.scss";
 import logo from "../logo.svg";
 
@@ -35,15 +35,25 @@ import logo from "../logo.svg";
 
 const DisplayInfo = (props) => {
 
+    const { listUsers } = props;
+
+    const [showListUser, setShowListUser] = useState(true);
+
     const handleClickDelete = (userId) => {
         props.onDeleteUser(userId);
     }
 
-    const { listUsers } = props;
-
+    const handleToggleShowListUser = () => {
+        setShowListUser(!showListUser);
+    }
     return (
         <div className="display-info-container">
-            {true &&
+            <div>
+                <span onClick={() => handleToggleShowListUser()} style={{ cursor: "pointer" }}>
+                    {showListUser ? "Hide" : "Show"} list users
+                </span>
+            </div>
+            {showListUser &&
                 <>
                     {listUsers.map((user, index) => {
                         return (
