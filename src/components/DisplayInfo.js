@@ -49,7 +49,7 @@ const DisplayInfo = (props) => {
 
     useEffect(() => {
         console.log("call me useEffect");
-    }, [listUsers);
+    }, [listUsers]);
 
     console.log("asfasfasf");
 
