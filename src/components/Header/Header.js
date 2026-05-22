@@ -25,7 +25,7 @@ const Header = () => {
                             Admin
                         </NavLink>
                     </Nav>
-                    <nav>
+                    <Nav>
                         <NavDropdown title="Settings" id="basic-nav-dropdown">
                             <NavDropdown.Item >Log in</NavDropdown.Item>
                             <NavDropdown.Item >
@@ -34,7 +34,7 @@ const Header = () => {
                             <NavDropdown.Item>Profile</NavDropdown.Item>
                             {/* <NavDropdown.Divider /> */}
                         </NavDropdown>
-                    </nav>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
