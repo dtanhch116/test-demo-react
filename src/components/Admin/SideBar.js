@@ -1,5 +1,6 @@
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
+import logo from "../../logo.svg";
 
 import {
     FaTachometerAlt,
@@ -12,11 +13,19 @@ import {
 const SideBar = (props) => {
     let collapsed = props.collapsed;
     return (
+
         <Sidebar
             style={{ height: "100vh" }}
             backgroundColor="#1f2937"
             collapsed={collapsed}
         >
+            <div className="admin-logo">
+                <img src={logo} alt="Logo" />
+                {!collapsed && <div>
+                    <h5>AnT</h5>
+                </div>}
+                <hr></hr>
+            </div>
             <Menu
                 menuItemStyles={{
                     button: {
@@ -34,11 +43,6 @@ const SideBar = (props) => {
                 <MenuItem
                     icon={<FaTachometerAlt />}
                     component={<Link to="/" />}
-                    menuItemStyles={{
-                        "&:hover": {
-                            backgroundColor: "#4b5563",
-                        },
-                    }}
                 >
                     Dashboard
                 </MenuItem>
@@ -82,6 +86,7 @@ const SideBar = (props) => {
                 </SubMenu>
             </Menu>
         </Sidebar >
+
     );
 };
 
