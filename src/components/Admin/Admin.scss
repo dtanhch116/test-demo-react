@@ -1,5 +1,27 @@
 .admin-container {
     display: flex;
+
+}
+
+.admin-content {
+    width: 100%;
+
+    .admin-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        height: 40px;
+        border: 1px solid green;
+    }
+
+    &.collapsed {
+        width: 60px;
+    }
+
+    .admin-main {
+        border: 1px solid red;
+    }
 }
 
 .admin-logo {

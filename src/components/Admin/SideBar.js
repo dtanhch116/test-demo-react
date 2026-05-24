@@ -42,16 +42,16 @@ const SideBar = (props) => {
             >
                 <MenuItem
                     icon={<FaTachometerAlt />}
-                    component={<Link to="/" />}
+                    component={<Link to="/admins" />}
                 >
                     Dashboard
                 </MenuItem>
 
                 <MenuItem
                     icon={<FaGem />}
-                    component={<Link to="/components" />}
+                    component={<Link to="/admins/manage-users" />}
                 >
-                    Components
+                    Manage Users
                 </MenuItem>
 
                 <SubMenu
